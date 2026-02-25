@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -18,357 +19,385 @@
     --shadow-hover: 0 8px 40px rgba(61,43,31,0.16);
   }
 
-  * { box-sizing: border-box; margin: 0; padding: 0; }
+- { box-sizing: border-box; margin: 0; padding: 0; }
 
-  body {
-    font-family: 'DM Sans', sans-serif;
-    background: var(--cream);
-    color: var(--brown);
-    min-height: 100vh;
-  }
+body {
+font-family: ‘DM Sans’, sans-serif;
+background: var(–cream);
+color: var(–brown);
+min-height: 100vh;
+}
 
-  header {
-    background: var(--brown);
-    padding: 28px 24px 20px;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-  }
+/* HEADER */
+header {
+background: var(–brown);
+padding: 28px 24px 20px;
+position: sticky;
+top: 0;
+z-index: 100;
+}
 
-  header h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 28px;
-    color: var(--cream);
-    letter-spacing: -0.5px;
-    margin-bottom: 14px;
-  }
+header h1 {
+font-family: ‘Playfair Display’, serif;
+font-size: 28px;
+color: var(–cream);
+letter-spacing: -0.5px;
+margin-bottom: 14px;
+}
 
-  header h1 span {
-    color: var(--rust-light);
-    font-style: italic;
-  }
+header h1 span {
+color: var(–rust-light);
+font-style: italic;
+}
 
-  .search-wrap { position: relative; }
+.search-wrap {
+position: relative;
+}
 
-  #search {
-    width: 100%;
-    padding: 12px 44px 12px 16px;
-    border-radius: 12px;
-    border: none;
-    background: rgba(255,255,255,0.1);
-    color: var(--cream);
-    font-family: 'DM Sans', sans-serif;
-    font-size: 15px;
-    outline: none;
-    transition: background 0.2s;
-  }
+#search {
+width: 100%;
+padding: 12px 44px 12px 16px;
+border-radius: 12px;
+border: none;
+background: rgba(255,255,255,0.1);
+color: var(–cream);
+font-family: ‘DM Sans’, sans-serif;
+font-size: 15px;
+outline: none;
+transition: background 0.2s;
+}
 
-  #search::placeholder { color: rgba(250,247,242,0.4); }
-  #search:focus { background: rgba(255,255,255,0.18); }
+#search::placeholder { color: rgba(250,247,242,0.4); }
+#search:focus { background: rgba(255,255,255,0.18); }
 
-  .search-icon {
-    position: absolute;
-    right: 14px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: rgba(250,247,242,0.4);
-    font-size: 16px;
-    pointer-events: none;
-  }
+.search-icon {
+position: absolute;
+right: 14px;
+top: 50%;
+transform: translateY(-50%);
+color: rgba(250,247,242,0.4);
+font-size: 16px;
+pointer-events: none;
+}
 
-  .stats-bar {
-    padding: 12px 24px;
-    background: var(--warm);
-    border-bottom: 1px solid rgba(61,43,31,0.08);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
+/* STATS BAR */
+.stats-bar {
+padding: 12px 24px;
+background: var(–warm);
+border-bottom: 1px solid rgba(61,43,31,0.08);
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
 
-  .stats-bar span {
-    font-size: 13px;
-    color: var(--muted);
-    font-weight: 500;
-  }
+.stats-bar span {
+font-size: 13px;
+color: var(–muted);
+font-weight: 500;
+}
 
-  .grid {
-    padding: 20px 16px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 14px;
-  }
+/* GRID */
+.grid {
+padding: 20px 16px;
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 14px;
+}
 
-  .card {
-    background: var(--card-bg);
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: var(--shadow);
-    cursor: pointer;
-    transition: transform 0.2s, box-shadow 0.2s;
-    -webkit-tap-highlight-color: transparent;
-  }
+.card {
+background: var(–card-bg);
+border-radius: 16px;
+overflow: hidden;
+box-shadow: var(–shadow);
+cursor: pointer;
+transition: transform 0.2s, box-shadow 0.2s;
+-webkit-tap-highlight-color: transparent;
+}
 
-  .card:active {
-    transform: scale(0.97);
-    box-shadow: var(--shadow);
-  }
+.card:active {
+transform: scale(0.97);
+box-shadow: var(–shadow);
+}
 
-  .card-thumb {
-    width: 100%;
-    aspect-ratio: 1;
-    object-fit: cover;
-    background: var(--warm);
-    display: block;
-  }
+.card-thumb {
+width: 100%;
+aspect-ratio: 1;
+object-fit: cover;
+background: var(–warm);
+display: block;
+}
 
-  .card-thumb-placeholder {
-    width: 100%;
-    aspect-ratio: 1;
-    background: linear-gradient(135deg, var(--warm) 0%, #e8ddd0 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 36px;
-  }
+.card-thumb-placeholder {
+width: 100%;
+aspect-ratio: 1;
+background: linear-gradient(135deg, var(–warm) 0%, #e8ddd0 100%);
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 36px;
+}
 
-  .card-body { padding: 12px; }
+.card-body {
+padding: 12px;
+}
 
-  .card-name {
-    font-family: 'Playfair Display', serif;
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 1.3;
-    margin-bottom: 4px;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-  }
+.card-name {
+font-family: ‘Playfair Display’, serif;
+font-size: 14px;
+font-weight: 700;
+line-height: 1.3;
+margin-bottom: 4px;
+display: -webkit-box;
+-webkit-line-clamp: 2;
+-webkit-box-orient: vertical;
+overflow: hidden;
+}
 
-  .card-meta {
-    font-size: 11px;
-    color: var(--muted);
-    font-weight: 500;
-  }
+.card-meta {
+font-size: 11px;
+color: var(–muted);
+font-weight: 500;
+}
 
-  .empty {
-    text-align: center;
-    padding: 80px 32px;
-    grid-column: 1 / -1;
-  }
+/* EMPTY STATE */
+.empty {
+text-align: center;
+padding: 80px 32px;
+grid-column: 1 / -1;
+}
 
-  .empty-icon { font-size: 56px; margin-bottom: 16px; }
+.empty-icon { font-size: 56px; margin-bottom: 16px; }
 
-  .empty h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 22px;
-    margin-bottom: 10px;
-  }
+.empty h2 {
+font-family: ‘Playfair Display’, serif;
+font-size: 22px;
+margin-bottom: 10px;
+}
 
-  .empty p {
-    font-size: 14px;
-    color: var(--muted);
-    line-height: 1.6;
-  }
+.empty p {
+font-size: 14px;
+color: var(–muted);
+line-height: 1.6;
+}
 
-  .overlay {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(30,16,8,0.6);
-    z-index: 200;
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-  }
+/* RECIPE MODAL */
+.overlay {
+display: none;
+position: fixed;
+inset: 0;
+background: rgba(30,16,8,0.6);
+z-index: 200;
+backdrop-filter: blur(4px);
+-webkit-backdrop-filter: blur(4px);
+}
 
-  .overlay.active { display: flex; align-items: flex-end; }
+.overlay.active { display: flex; align-items: flex-end; }
 
-  .modal {
-    background: var(--cream);
-    border-radius: 24px 24px 0 0;
-    width: 100%;
-    max-height: 90vh;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-    padding-bottom: env(safe-area-inset-bottom, 20px);
-    animation: slideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  }
+.modal {
+background: var(–cream);
+border-radius: 24px 24px 0 0;
+width: 100%;
+max-height: 90vh;
+overflow-y: auto;
+-webkit-overflow-scrolling: touch;
+padding-bottom: env(safe-area-inset-bottom, 20px);
+animation: slideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
 
-  @keyframes slideUp {
-    from { transform: translateY(100%); }
-    to { transform: translateY(0); }
-  }
+@keyframes slideUp {
+from { transform: translateY(100%); }
+to { transform: translateY(0); }
+}
 
-  .modal-handle {
-    width: 40px;
-    height: 4px;
-    background: rgba(61,43,31,0.2);
-    border-radius: 2px;
-    margin: 12px auto 0;
-  }
+.modal-handle {
+width: 40px;
+height: 4px;
+background: rgba(61,43,31,0.2);
+border-radius: 2px;
+margin: 12px auto 0;
+}
 
-  .modal-thumb {
-    width: 100%;
-    height: 240px;
-    object-fit: cover;
-    margin-top: 12px;
-    display: block;
-  }
+.modal-thumb {
+width: 100%;
+height: 240px;
+object-fit: cover;
+margin-top: 12px;
+display: block;
+}
 
-  .modal-thumb-placeholder {
-    width: 100%;
-    height: 180px;
-    background: linear-gradient(135deg, var(--warm), #e8ddd0);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 64px;
-    margin-top: 12px;
-  }
+.modal-thumb-placeholder {
+width: 100%;
+height: 180px;
+background: linear-gradient(135deg, var(–warm), #e8ddd0);
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 64px;
+margin-top: 12px;
+}
 
-  .modal-content { padding: 20px 24px; }
+.modal-content { padding: 20px 24px; }
 
-  .modal-tag {
-    display: inline-block;
-    background: var(--rust);
-    color: white;
-    font-size: 10px;
-    font-weight: 500;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    padding: 4px 10px;
-    border-radius: 20px;
-    margin-bottom: 10px;
-  }
+.modal-tag {
+display: inline-block;
+background: var(–rust);
+color: white;
+font-size: 10px;
+font-weight: 500;
+letter-spacing: 1px;
+text-transform: uppercase;
+padding: 4px 10px;
+border-radius: 20px;
+margin-bottom: 10px;
+}
 
-  .modal-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 26px;
-    line-height: 1.2;
-    margin-bottom: 8px;
-  }
+.modal-title {
+font-family: ‘Playfair Display’, serif;
+font-size: 26px;
+line-height: 1.2;
+margin-bottom: 8px;
+}
 
-  .modal-description {
-    font-size: 14px;
-    color: var(--muted);
-    line-height: 1.6;
-    margin-bottom: 16px;
-  }
+.modal-description {
+font-size: 14px;
+color: var(–muted);
+line-height: 1.6;
+margin-bottom: 16px;
+}
 
-  .modal-meta {
-    display: flex;
-    gap: 16px;
-    flex-wrap: wrap;
-    margin-bottom: 24px;
-    padding: 14px;
-    background: var(--warm);
-    border-radius: 12px;
-  }
+.modal-meta {
+display: flex;
+gap: 16px;
+flex-wrap: wrap;
+margin-bottom: 24px;
+padding: 14px;
+background: var(–warm);
+border-radius: 12px;
+}
 
-  .meta-item { text-align: center; flex: 1; }
-  .meta-label { font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 2px; }
-  .meta-value { font-size: 14px; font-weight: 500; }
+.meta-item { text-align: center; flex: 1; }
+.meta-label { font-size: 10px; color: var(–muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 2px; }
+.meta-value { font-size: 14px; font-weight: 500; }
 
-  .section-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 18px;
-    margin-bottom: 12px;
-    padding-bottom: 8px;
-    border-bottom: 2px solid var(--warm);
-  }
+.section-title {
+font-family: ‘Playfair Display’, serif;
+font-size: 18px;
+margin-bottom: 12px;
+padding-bottom: 8px;
+border-bottom: 2px solid var(–warm);
+}
 
-  .ingredients { margin-bottom: 28px; }
+.ingredients { margin-bottom: 28px; }
 
-  .ingredient-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    padding: 8px 0;
-    border-bottom: 1px solid var(--warm);
-    font-size: 14px;
-    line-height: 1.4;
-  }
+.ingredient-item {
+display: flex;
+align-items: flex-start;
+gap: 10px;
+padding: 8px 0;
+border-bottom: 1px solid var(–warm);
+font-size: 14px;
+line-height: 1.4;
+}
 
-  .ingredient-bullet {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: var(--rust);
-    flex-shrink: 0;
-    margin-top: 6px;
-  }
+.ingredient-bullet {
+width: 6px;
+height: 6px;
+border-radius: 50%;
+background: var(–rust);
+flex-shrink: 0;
+margin-top: 6px;
+}
 
-  .steps { margin-bottom: 28px; }
+.steps { margin-bottom: 28px; }
 
-  .step-item {
-    display: flex;
-    gap: 14px;
-    margin-bottom: 16px;
-    align-items: flex-start;
-  }
+.step-item {
+display: flex;
+gap: 14px;
+margin-bottom: 16px;
+align-items: flex-start;
+}
 
-  .step-num {
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    background: var(--brown);
-    color: var(--cream);
-    font-size: 13px;
-    font-weight: 700;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    font-family: 'Playfair Display', serif;
-  }
+.step-num {
+width: 28px;
+height: 28px;
+border-radius: 50%;
+background: var(–brown);
+color: var(–cream);
+font-size: 13px;
+font-weight: 700;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-shrink: 0;
+font-family: ‘Playfair Display’, serif;
+}
 
-  .step-text {
-    font-size: 14px;
-    line-height: 1.7;
-    padding-top: 4px;
-  }
+.step-text {
+font-size: 14px;
+line-height: 1.7;
+padding-top: 4px;
+}
 
-  .modal-actions {
-    display: flex;
-    gap: 10px;
-    margin-top: 24px;
-  }
+.modal-actions {
+display: flex;
+gap: 10px;
+margin-top: 24px;
+}
 
-  .btn {
-    flex: 1;
-    padding: 14px;
-    border-radius: 12px;
-    border: none;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 14px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: opacity 0.2s;
-  }
+.btn {
+flex: 1;
+padding: 14px;
+border-radius: 12px;
+border: none;
+font-family: ‘DM Sans’, sans-serif;
+font-size: 14px;
+font-weight: 500;
+cursor: pointer;
+transition: opacity 0.2s;
+}
 
-  .btn:active { opacity: 0.7; }
-  .btn-primary { background: var(--rust); color: white; }
-  .btn-ghost { background: var(--warm); color: var(--brown); }
-  .btn-danger { background: #ffeeed; color: #c0392b; }
+.btn:active { opacity: 0.7; }
 
-  .toast {
-    position: fixed;
-    bottom: 40px;
-    left: 50%;
-    transform: translateX(-50%) translateY(100px);
-    background: var(--brown);
-    color: var(--cream);
-    padding: 12px 20px;
-    border-radius: 24px;
-    font-size: 14px;
-    font-weight: 500;
-    z-index: 999;
-    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-    white-space: nowrap;
-  }
+.btn-primary { background: var(–rust); color: white; }
+.btn-ghost { background: var(–warm); color: var(–brown); }
+.btn-danger { background: #ffeeed; color: #c0392b; }
 
-  .toast.show { transform: translateX(-50%) translateY(0); }
+.modal-close {
+position: absolute;
+top: 16px;
+right: 16px;
+width: 32px;
+height: 32px;
+border-radius: 50%;
+background: rgba(61,43,31,0.1);
+border: none;
+font-size: 16px;
+cursor: pointer;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+/* TOAST */
+.toast {
+position: fixed;
+bottom: 40px;
+left: 50%;
+transform: translateX(-50%) translateY(100px);
+background: var(–brown);
+color: var(–cream);
+padding: 12px 20px;
+border-radius: 24px;
+font-size: 14px;
+font-weight: 500;
+z-index: 999;
+transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+white-space: nowrap;
+}
+
+.toast.show { transform: translateX(-50%) translateY(0); }
 </style>
+
 </head>
 <body>
 
@@ -458,8 +487,8 @@ function render(query = '') {
 
   grid.innerHTML = filtered.map(r => `
     <div class="card" onclick="openRecipe('${r.id}')">
-      ${r.thumbnail_url
-        ? `<img class="card-thumb" src="${escHtml(r.thumbnail_url)}" loading="lazy" onerror="this.parentNode.innerHTML='<div class=card-thumb-placeholder>🍽️</div>'+this.parentNode.innerHTML.replace(this.outerHTML,'')" alt="">`
+      ${(r.local_photo || r.thumbnail_url)
+        ? `<img class="card-thumb" src="${escHtml(r.local_photo || r.thumbnail_url)}" loading="lazy" onerror="this.parentNode.innerHTML='<div class=card-thumb-placeholder>🍽️</div>'+this.parentNode.innerHTML.replace(this.outerHTML,'')" alt="">`
         : `<div class="card-thumb-placeholder">🍽️</div>`}
       <div class="card-body">
         <div class="card-name">${escHtml(r.name || 'Untitled Recipe')}</div>
@@ -482,10 +511,18 @@ function openRecipe(id) {
   const hasMeta = r.prep_time || r.cook_time || r.servings;
 
   const inner = document.getElementById('modal-inner');
+  const thumbSrc = r.local_photo || r.thumbnail_url;
+
   inner.innerHTML = `
-    ${r.thumbnail_url
-      ? `<img class="modal-thumb" src="${escHtml(r.thumbnail_url)}" onerror="this.outerHTML='<div class=modal-thumb-placeholder>🍽️</div>'" alt="">`
-      : `<div class="modal-thumb-placeholder">🍽️</div>`}
+    <input type="file" accept="image/*" id="photo-input" style="display:none" onchange="handlePhotoUpload(event,'${r.id}')">
+    ${thumbSrc
+      ? `<div style="position:relative">
+           <img class="modal-thumb" src="${escHtml(thumbSrc)}" onerror="this.outerHTML='<div class=modal-thumb-placeholder>🍽️</div>'" alt="">
+           <button onclick="document.getElementById('photo-input').click()" style="position:absolute;bottom:10px;right:10px;background:rgba(0,0,0,0.6);color:white;border:none;border-radius:20px;padding:6px 12px;font-size:12px;font-family:'DM Sans',sans-serif;">📷 Change</button>
+         </div>`
+      : `<div class="modal-thumb-placeholder" onclick="document.getElementById('photo-input').click()" style="cursor:pointer">
+           <div style="text-align:center"><div style="font-size:48px">📷</div><div style="font-size:14px;margin-top:8px;font-family:'DM Sans',sans-serif;color:#9a8878">Tap to add photo</div></div>
+         </div>`}
     <div class="modal-content">
       <div class="modal-tag">TikTok Recipe</div>
       <h2 class="modal-title">${escHtml(r.name || 'Untitled Recipe')}</h2>
@@ -493,7 +530,7 @@ function openRecipe(id) {
       ${hasMeta ? `
       <div class="modal-meta">
         ${r.prep_time ? `<div class="meta-item"><div class="meta-label">Prep</div><div class="meta-value">${escHtml(r.prep_time)}</div></div>` : ''}
-        ${r.cook_time ? `<div class="meta-item"><div class="meta-label">Cook</div><div class="meta-value">${escHtml(r.cook_time)}</div></div>` : ''}
+        ${r.cook_time ? `<div class="meta-item"><div class="meta-label">Cook Time</div><div class="meta-value">${escHtml(r.cook_time)}</div></div>` : ''}
         ${r.servings ? `<div class="meta-item"><div class="meta-label">Serves</div><div class="meta-value">${escHtml(r.servings)}</div></div>` : ''}
       </div>` : ''}
 
@@ -547,6 +584,7 @@ function deleteRecipe(id) {
   showToast('Recipe deleted');
 }
 
+// Handle incoming recipe from Shortcut via URL param
 function checkIncoming() {
   const params = new URLSearchParams(window.location.search);
   const raw = params.get('recipe');
@@ -555,6 +593,7 @@ function checkIncoming() {
   try {
     const data = JSON.parse(decodeURIComponent(raw));
     if (data && data.name) {
+      // Check for duplicate source URL
       if (data.source_url && recipes.some(r => r.source_url === data.source_url)) {
         showToast('Recipe already saved!');
       } else {
@@ -571,15 +610,34 @@ function checkIncoming() {
     showToast('Could not read recipe data');
   }
 
+  // Clean URL without reloading
   const clean = window.location.pathname;
   window.history.replaceState({}, '', clean);
 }
 
+// Search
+function handlePhotoUpload(event, id) {
+  const file = event.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = function(e) {
+    const idx = recipes.findIndex(r => r.id === id);
+    if (idx === -1) return;
+    recipes[idx].local_photo = e.target.result;
+    save();
+    openRecipe(id);
+    showToast('Photo saved!');
+  };
+  reader.readAsDataURL(file);
+}
+
 document.getElementById('search').addEventListener('input', e => render(e.target.value));
 
+// Init
 load();
 render();
 checkIncoming();
 </script>
+
 </body>
 </html>
